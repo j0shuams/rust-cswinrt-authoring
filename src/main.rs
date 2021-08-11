@@ -1,4 +1,5 @@
 use bindings::authoring_demo::*;
+use bindings::coords::*;
 use bindings::*;
 use futures::executor::block_on;
 
@@ -14,6 +15,13 @@ fn main() -> windows::Result<()> {
     block_on(future)?;
     let files = folder_enumerator.all_files()?.to_string();
     println!("{}", files);
+
+    println!("--------------------");
+    let x : Coord = Coord::new()?;
+    let y : Coord = Coord::create_coord(39.0, 80.0)?;
+    println!("Distance between {} and {}", x.to_string()?.to_string(), y.to_string()?.to_string());
+    println!("Expect : 89");
+    println!("Actual : {}", x.distance(y)?);
 
     Ok(())
 }

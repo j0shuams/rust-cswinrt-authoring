@@ -10,5 +10,9 @@
         name="AuthoringDemo.FolderEnumeration"
         threadingModel="both"
         xmlns="urn:schemas-microsoft-com:winrt.v1" />
+    <activatableClass
+        name="Coords.Coord"
+        threadingModel="both"
+        xmlns="urn:schemas-microsoft-com:winrt.v1" />
   </file>
 </assembly>
